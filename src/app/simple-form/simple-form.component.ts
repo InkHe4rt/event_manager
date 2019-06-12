@@ -1,10 +1,10 @@
-import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from '@angular/core';
 
 @Component({
-  selector: 'app-test',
+  selector: 'app-simple-form',
   template: `  
     
-    <h2>Events <span>( 1 )</span></h2>
+    
     
   <input 
     #myInput 
@@ -17,12 +17,30 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
     >
     <button (click)="update.emit({text:message})">Event Hinzufügen!</button>
   `,
-  styles: []
+  styles: [`
+  :host{
+    display: flex;
+  }
+  
+  .mousedown{
+    border: 2px solid green;
+  }
+  inputs:focus{
+    font-weight: bold;
+    outline: none;
+  }
+
+  input{
+    margin-left: 10px;
+  }
+  button{
+    border: none;
+  }
+  `]
 })
+export class SimpleFormComponent implements OnInit {
 
-export class TestComponent implements OnInit {
-
-isMousedown;
+  isMousedown;
 
   @Input() message;
 
