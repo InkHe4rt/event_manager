@@ -2,15 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from 
 
 @Component({
   selector: 'app-simple-form',
-  template: `  
-    
-    
-    
-  <input 
-    #myInput 
-    type="text" 
-    [(ngModel)]="message" 
-    [ngClass]="{mousedown: isMousedown}"
+  template: `    <input #myInput type="text" [(ngModel)]="message" [ngClass]="{mousedown: isMousedown}"
     (mousedown)="isMousedown = true"
     (mouseup)="isMousedown = false"
     (mouseleave)="isMousedown = false"
@@ -20,9 +12,7 @@ import {Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation} from 
   styles: [`
   :host{
     display: flex;
-  }
-  
-  .mousedown{
+  }  .mousedown{
     border: 2px solid green;
   }
   inputs:focus{
