@@ -2,12 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './simple-form/test.component';
+import { EventEditorComponent } from './event-editor/event-editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    EventEditorComponent
   ],
   imports: [
     BrowserModule,

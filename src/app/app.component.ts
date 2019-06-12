@@ -1,5 +1,6 @@
 import {Component, Inject} from '@angular/core';
-
+import {ɵDomEventsPlugin} from '@angular/platform-browser';
+import {Event} from './event.model';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,9 @@ import {Component, Inject} from '@angular/core';
 })
 export class AppComponent {
 
+  events: Event[] = [
+    {name: 'franz', date: new Date().getTime(), isBookmarked: false}
+  ];
 
   constructor() {}
 }
