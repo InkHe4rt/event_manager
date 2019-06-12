@@ -8,7 +8,6 @@ import {Event} from './event.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-
   public showEvent: boolean;
 
   events: Event[] = [

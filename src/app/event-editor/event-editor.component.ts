@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventEditorComponent implements OnInit {
 
-  // public array
 
-  constructor() { }
+
+  constructor() {
+    const numbers = [1, 2, 3];
+    for (const num of numbers) {
+      document.write(String(num));
+    }
+  }
 
   ngOnInit() {
   }
