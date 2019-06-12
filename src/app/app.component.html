@@ -10,21 +10,26 @@
 
 <div class="titlebox" >
 <h1>Mittelalter Events!</h1>
-<!-- <event-list></event-list>-->
-<!--  buttons hier ?-->
 </div>
 
 <br>
 
 <div class="smalTitlebox">
-<!--  <app-test></app-test>-->
+  <h2>Events</h2>
+  <app-event-editor></app-event-editor>
+  <!--  buttons hier ?-->
+  <input type="name">
+  <input type="date" name="eventday">
+  <button (click)="events">Eintragen</button>
+  <br>
+  <button>Merken</button>
 </div>
 
 <br>
 
 <div class="smalTitlebox">
-<h2>Meine Events</h2>
-<!--<event-list></event-list>-->
+  <h2>Meine Events</h2>
+  <app-event-editor></app-event-editor>
 </div>
 
 </body>
