@@ -9,6 +9,8 @@ import {Event} from './event.model';
 })
 export class AppComponent {
 
+  public showEvent: boolean;
+
   events: Event[] = [
     {name: 'franz', date: new Date().getTime(), isBookmarked: false}
   ];
