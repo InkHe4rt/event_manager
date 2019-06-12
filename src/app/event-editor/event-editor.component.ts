@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventEditorComponent implements OnInit {
 
-  public
+  // public array
 
   constructor() { }
 
