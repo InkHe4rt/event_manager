@@ -23,21 +23,15 @@
 </div>
 
 <div>
-  <ul>
-    <li *ngFor="let message of mail.messages">{{message.text}}</li>
-  </ul>
-
-  <app-simple-form
-    *ngFor="let message of mail.messages"
-    [message]="message.text"
-    (update)="onUpdate(message.id, $event.text)"
-  >
-
-  </app-simple-form>
-</div>`
+<!--  <ul>-->
+<!--    <li *ngFor="let message of mail.messages">{{message.text}}</li>-->
+<!--  </ul>-->
 
 
-<app-simple-form></app-simple-form>
+</div>
+
+
+
 
 <br>
 
@@ -45,9 +39,9 @@
 <h2>Meine Events</h2>
 </div>
 
-<ul>
-  <li *ngFor="let message of mail.messages">{{message.text}}</li>
-</ul>
+<!--<ul>-->
+<!--  <li *ngFor="let message of mail.messages">{{message.text}}</li>-->
+<!--</ul>-->
 
 
 <!-- Optional JavaScript -->
