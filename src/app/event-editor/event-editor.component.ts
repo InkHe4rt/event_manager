@@ -10,7 +10,7 @@ export class EventEditorComponent implements OnInit {
 
 
   constructor() {
-    //test
+    // test
     // const numbers = [1, 2, 3];
     // for (const num of numbers) {
     //   document.write(String(num));
