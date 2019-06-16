@@ -10,10 +10,11 @@ export class EventEditorComponent implements OnInit {
 
 
   constructor() {
-    const numbers = [1, 2, 3];
-    for (const num of numbers) {
-      document.write(String(num));
-    }
+    //test
+    // const numbers = [1, 2, 3];
+    // for (const num of numbers) {
+    //   document.write(String(num));
+    // }
   }
 
   ngOnInit() {

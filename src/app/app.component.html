@@ -17,12 +17,18 @@
 <div class="smalTitlebox">
   <h2>Events</h2>
   <app-event-editor></app-event-editor>
-  <!--  buttons hier ?-->
   <input type="name">
   <input type="date" name="eventday">
   <button>Eintragen</button>
   <br>
-  <button>Merken</button>
+  <ul>
+    <li *ngFor="let Event of events">
+      {{ Event.name }}
+      {{ Event.date }}
+      {{ Event.isBookmarked }}
+    </li>
+  </ul>
+  <p *ngIf="events.length > 3">
 </div>
 
 <br>

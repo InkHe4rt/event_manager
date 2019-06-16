@@ -8,11 +8,16 @@ import {Event} from './event.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   public showEvent: boolean;
 
   events: Event[] = [
-    {name: 'franz', date: new Date().getTime(), isBookmarked: false}
+    {name: 'franz', date: new Date().getTime(), isBookmarked: false},
+    {name: 'Sepp', date: new Date().getTime(), isBookmarked: true}
+
   ];
+
+  myEvent = this.events[0];
 
   constructor() {}
 }
