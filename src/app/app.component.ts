@@ -1,6 +1,5 @@
 import {Component, Inject} from '@angular/core';
-import {ɵDomEventsPlugin} from '@angular/platform-browser';
-import {Event} from './event.model';
+import {EventModel} from './event.model';
 
 @Component({
   selector: 'app-root',
@@ -9,15 +8,15 @@ import {Event} from './event.model';
 })
 export class AppComponent {
 
-  public showEvent: boolean;
-
-  events: Event[] = [
-    {name: 'franz', date: new Date().getTime(), isBookmarked: false},
-    {name: 'Sepp', date: new Date().getTime(), isBookmarked: true}
-
+  events: EventModel[] = [
+    {name: 'Fribourg en Médiéval', date: new Date(), isBookmarked: false},
+    {name: 'Burg Manneberg', date: new Date(), isBookmarked: true},
+    {name: 'Sommer Sonnwendefeier', date: new Date(), isBookmarked: true}
   ];
 
-  myEvent = this.events[0];
+  mode: 'view'|'edit' = 'view';
 
-  constructor() {}
+  constructor() {
+
+  }
 }

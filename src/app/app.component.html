@@ -12,31 +12,16 @@
   <h1>Mittelalter Events!</h1>
 </div>
 
-<br>
+<!-- event list -->
+<app-event-list [events]="events" *ngIf="mode =='view'"></app-event-list>
 
-<div class="smalTitlebox">
-  <h2>Events</h2>
-  <app-event-editor></app-event-editor>
-  <input type="name">
-  <input type="date" name="eventday">
-  <button>Eintragen</button>
-  <br>
-  <ul>
-    <li *ngFor="let Event of events">
-      {{ Event.name }}
-      {{ Event.date }}
-      {{ Event.isBookmarked }}
-    </li>
-  </ul>
-  <p *ngIf="events.length > 3">
-</div>
-
-<br>
+<app-event-editor *ngIf="mode =='edit'"></app-event-editor>
 
 <div class="smalTitlebox">
   <h2>Meine Events</h2>
-  <app-event-editor></app-event-editor>
+  <app-event-list [events]="events" *ngIf="mode =='view'"></app-event-list>
 </div>
+
 
 </body>
 </html>

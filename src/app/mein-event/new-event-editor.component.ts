@@ -1,12 +1,13 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import {EventModel} from '../event.model';
 
+
 @Component({
-  selector: 'app-event-editor',
-  templateUrl: './event-editor.component.html',
-  styleUrls: ['./event-editor.component.css']
+  selector: 'app-new-event-editor',
+  templateUrl: './new-event-editor.component.html',
+  styleUrls: ['./new-event-editor.component.css']
 })
-export class EventEditorComponent implements OnInit {
+export class NewEventEditorComponent implements OnInit {
 
   public showEvent: boolean;
   public showEvent2: boolean;

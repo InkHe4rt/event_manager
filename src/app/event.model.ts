@@ -1,6 +1,6 @@
-export interface Event {
+export interface EventModel {
   name: string;
-  date: number;
+  date: Date;
   isBookmarked: boolean;
 
 }
