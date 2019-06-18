@@ -1,21 +1,11 @@
 
 <div *ngFor="let event of events ">
   {{event.name}}, {{event.date | date }}
-  <button (click)="onToggleOn()" *ngIf="isBookmark === false">edit</button>
+  <button (click)="onEdit(event)" *ngIf="isBookmark === false">edit</button>
   <button (click)="onButtonClicked(event)">{{isBookmark === true ? 'remove from bookmark' : 'bookmark'}}</button>
-
-
-  <div *ngIf="isBookmark === false">
-    <div *ngIf="!isOn">
-      <input type="text" onfocus="this.value=''" value="eventname">
-      <input type="date" value="date">
-      <button>save</button>
-      <button>cancel</button>
-      <br>
-      <br>
-    </div>
-  </div>
 </div>
+
+<div *ngIf="mode == 'edit'"><app-event></app-event></div>
 
 <!--{{event.name +', '+event.date}},-->
 <!--{{getDisplayValue(event)}}-->

@@ -2,17 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EventEditorComponent } from './event-editor/event-editor.component';
 import {FormsModule} from '@angular/forms';
-import {NewEventEditorComponent} from './mein-event/new-event-editor.component';
 import { EventListComponent } from './event-list/event-list.component';
+import { EventComponent } from './event-list/event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventEditorComponent,
-    NewEventEditorComponent,
-    EventListComponent
+    EventListComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,

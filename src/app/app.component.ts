@@ -14,8 +14,6 @@ export class AppComponent {
     {name: 'Sommer Sonnwendefeier', date: new Date(), isBookmarked: true}
   ];
 
-  mode: 'view'|'edit' = 'view';
-
   constructor() {
 
   }

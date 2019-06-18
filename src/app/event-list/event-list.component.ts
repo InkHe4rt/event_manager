@@ -1,7 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {EventModel} from '../event.model';
 
-
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html',
@@ -13,7 +12,7 @@ export class EventListComponent implements OnInit {
 
   @Input() isBookmark: boolean;
 
-  mode: 'view'|'edit' = 'view';// falscher ort?
+  mode: 'view'|'edit' = 'view';
   eventToEdit: EventModel;
 
   @Input() isOn = true;
@@ -29,11 +28,6 @@ export class EventListComponent implements OnInit {
 event.isBookmarked = !event.isBookmarked;
   }
 
-  onToggleOn() {
-    this.isOn = !this.isOn;
-  }
-
-  // kontrollieren
   onEdit(event: EventModel) {
     this.eventToEdit = event;
     this.mode = 'edit';

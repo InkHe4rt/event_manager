@@ -15,8 +15,7 @@
 <div class="smalTitlebox">
   <h2>Events</h2>
 <!-- event list -->
-<app-event-list [events]="getEvents()" [isBookmark]="false" *ngIf="mode =='view'"></app-event-list>
-  <app-event-editor *ngIf="mode =='edit'"></app-event-editor>
+<app-event-list [events]="getEvents()" [isBookmark]="false"></app-event-list>
 </div>
 
 <div class="smalTitlebox">
