@@ -1,24 +1,3 @@
-<div class="smalTitlebox">
-  <h2 (click)="showEvent =! showEvent">Events </h2>
-
-  <div><p>
-    Neues Event
-    <input type="name">
-    <input type="date" name="eventday">
-    <input type="submit" value="Hinzufügen">
-  </p></div>
-
-  <div *ngIf="showEvent">
-    <ul>
-      <li *ngFor="let Event of events">
-        <p>Das heutige Event heisst:  <strong>{{ Event.name }}</strong> <br>
-        und findet am <strong>{{ eventdate | date:"dd/MM/yy" }}</strong> statt.</p>
-
-        {{ Event.isBookmarked }}
-
-        <input type="newname" >
-        <input type="date" name="eventday">
-        <button value="Berabeiten" >Bearbeiten!</button>
-      </li>
-    </ul>
-  </div>
+<div *ngFor="let event of events " >
+  {{event.name}}, {{event.date | date }}
+</div>

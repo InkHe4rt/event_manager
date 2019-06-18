@@ -1,5 +1,8 @@
-<div *ngFor="let event of events">
+
+<div *ngFor="let event of events ">
   {{event.name}}, {{event.date | date }}
+  <button *ngIf="isBookmark === false">edit</button>
+  <button (click)="onButtonClicked(event)">{{isBookmark === true ? 'remove from bookmark' : 'bookmark'}}</button>
 </div>
 
 <!--{{event.name +', '+event.date}},-->

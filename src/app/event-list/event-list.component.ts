@@ -10,13 +10,28 @@ export class EventListComponent implements OnInit {
 
   @Input() events: EventModel[];
 
-  constructor() { }
+  @Input() isBookmark: boolean
+
+  constructor() {
+  }
 
   ngOnInit() {
+    // if(value === true){
+    //   // then this
+    // }else {
+    //   // then that
+    // }
+    //
+    // value === true ? /* then this */  : /* then that */
   }
 
-  getDisplayValue(event: EventModel): string {
-    return event.name + ', ' + event.date.toISOString();
+  // getDisplayValue(event: EventModel): string {
+  //   return event.name + ', ' + event.date.toISOString();
+  // }
+
+  onButtonClicked(event: EventModel) {
+event.isBookmarked = !event.isBookmarked;
   }
+
 
 }

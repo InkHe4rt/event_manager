@@ -12,14 +12,16 @@
   <h1>Mittelalter Events!</h1>
 </div>
 
+<div class="smalTitlebox">
+  <h2>Events</h2>
 <!-- event list -->
-<app-event-list [events]="events" *ngIf="mode =='view'"></app-event-list>
-
-<app-event-editor *ngIf="mode =='edit'"></app-event-editor>
+<app-event-list [events]="getEvents()" [isBookmark]="false"></app-event-list>
+</div>
 
 <div class="smalTitlebox">
   <h2>Meine Events</h2>
-  <app-event-list [events]="events" *ngIf="mode =='view'"></app-event-list>
+<!--  event editor -->
+  <app-event-list [events]="getBookmarkEvents()" [isBookmark]="true"></app-event-list>
 </div>
 
 
