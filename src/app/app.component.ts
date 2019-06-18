@@ -20,7 +20,7 @@ export class AppComponent {
 
   }
 
-  getEvents(events: EventModel[]) {
+  getEvents() {
     return this.events.filter(event => event.isBookmarked === false);
   }
 

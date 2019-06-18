@@ -1,5 +1,5 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
-import {EventModel} from '../event.model';
+
 
 @Component({
   selector: 'app-event-editor',
@@ -8,7 +8,7 @@ import {EventModel} from '../event.model';
 })
 export class EventEditorComponent implements OnInit {
 
-  @Input() events: EventModel[];
+
 
   constructor() {
 

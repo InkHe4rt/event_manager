@@ -4,7 +4,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hello, world!</title>
+  <title>Hello, adventure!</title>
 </head>
 <body>
 
@@ -15,7 +15,8 @@
 <div class="smalTitlebox">
   <h2>Events</h2>
 <!-- event list -->
-<app-event-list [events]="getEvents()" [isBookmark]="false"></app-event-list>
+<app-event-list [events]="getEvents()" [isBookmark]="false" *ngIf="mode =='view'"></app-event-list>
+  <app-event-editor *ngIf="mode =='edit'"></app-event-editor>
 </div>
 
 <div class="smalTitlebox">
@@ -23,7 +24,6 @@
 <!--  event editor -->
   <app-event-list [events]="getBookmarkEvents()" [isBookmark]="true"></app-event-list>
 </div>
-
 
 </body>
 </html>
