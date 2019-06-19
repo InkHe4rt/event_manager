@@ -43,10 +43,10 @@ export class EventComponent implements OnInit {
     this.eventClone = {name: this.event.name, date: this.event.date, isBookmarked: this.event.isBookmarked}; // neuer clone
   }
 
-
    onDeleteButtonClicked() {
      this.deleteRow.emit(this.transaction);
      console.log(this.transaction);
+
    }
 
 }

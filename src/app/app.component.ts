@@ -1,7 +1,6 @@
 import {Component, Input} from '@angular/core';
 import {EventModel} from './event.model';
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -26,7 +25,6 @@ export class AppComponent {
   getBookmarkEvents() {
     return this.events.filter(event => event.isBookmarked === true);
   }
-
 
   addEvent(eventname: string, date: string) {
       this.events.push({name: eventname, date: new Date(date), isBookmarked: false});
