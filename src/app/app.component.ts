@@ -15,10 +15,6 @@ export class AppComponent {
     {name: 'Sommer Sonnwendefeier', date: new Date(), isBookmarked: true}
   ];
 
-  // @Input() event: EventModel;
-  //
-  // newEvent: EventModel;
-
   constructor() {
 
   }

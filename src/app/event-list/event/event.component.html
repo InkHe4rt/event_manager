@@ -1,7 +1,7 @@
 <div *ngIf="mode==='view'">
   {{event.name}}, {{event.date | date }}
     <button (click)="onEdit()" *ngIf="isBookmark === false">edit</button>
-    <button *ngIf="isBookmark === false">Delete</button>
+    <button (click)="onDeleteButtonClicked()" *ngIf="isBookmark === false">Delete</button>
     <button (click)="onButtonClicked()">{{isBookmark === true ? 'remove from bookmark' : 'bookmark'}}</button>
 </div>
 

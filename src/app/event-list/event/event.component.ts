@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EventModel} from '../../event.model';
 
 @Component({
@@ -10,6 +10,9 @@ export class EventComponent implements OnInit {
 
   @Input() event: EventModel;
   @Input() isBookmark: boolean;
+
+  @Input() transaction: EventModel;
+  @Output() deleteRow: EventEmitter<EventModel> = new EventEmitter<EventModel>();
 
   mode: 'view' | 'edit' = 'view';
   eventClone: EventModel;
@@ -40,10 +43,11 @@ export class EventComponent implements OnInit {
     this.eventClone = {name: this.event.name, date: this.event.date, isBookmarked: this.event.isBookmarked}; // neuer clone
   }
 
-  //
-  // onDeleteButtonClicked( ) {
-  //
-  // }
+
+   onDeleteButtonClicked() {
+     this.deleteRow.emit(this.transaction);
+     console.log(this.transaction);
+   }
 
 }
 
