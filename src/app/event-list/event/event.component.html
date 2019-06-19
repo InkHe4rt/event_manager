@@ -1,13 +1,18 @@
 
-<!--<div *ngFor="let event of events ">-->
-<!--  {{event.name}}, {{event.date | date }}-->
+<ng-container *ngIf="mode==='view'">
+  {{event.name}}, {{event.date | date }}
+    <button (click)="onEdit(event)" *ngIf="isBookmark === false">edit</button>
+    <button (click)="onButtonClicked(event)">{{isBookmark === true ? 'remove from bookmark' : 'bookmark'}}</button>
+  </ng-container>
 
-  <div>
-    <input type="text" onfocus="this.value=''" value="eventname">
-    <input type="date" value="date">
-    <button>save</button>
-    <button>cancel</button>
+
+<div *ngIf="mode==='edit'">
+<!--  onfocus="this.value=''"-->
+    <input type="text" placeholder="{{event.name}}" name="{{event.name}}" [(ngModel)]="event.name">
+    <input type="date" placeholder="{{event.date}}" [(ngModel)]="event.date">
+    <button (click)="onSaveButtonClicked(event)">save</button>
+    <button (click)="onCancelButtonClicked(event)">cancel</button>
     <br>
-    <br>
-  </div>
-<!--</div>-->
+</div>
+
+

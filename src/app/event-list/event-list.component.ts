@@ -9,28 +9,13 @@ import {EventModel} from '../event.model';
 export class EventListComponent implements OnInit {
 
   @Input() events: EventModel[];
-
   @Input() isBookmark: boolean;
-
-  mode: 'view'|'edit' = 'view';
-  eventToEdit: EventModel;
-
-  @Input() isOn = true;
 
   constructor() {
   }
 
   ngOnInit() {
 
-  }
-
-  onButtonClicked(event: EventModel) {
-event.isBookmarked = !event.isBookmarked;
-  }
-
-  onEdit(event: EventModel) {
-    this.eventToEdit = event;
-    this.mode = 'edit';
   }
 
 }

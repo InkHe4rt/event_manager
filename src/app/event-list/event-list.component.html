@@ -1,11 +1,4 @@
-
 <div *ngFor="let event of events ">
-  {{event.name}}, {{event.date | date }}
-  <button (click)="onEdit(event)" *ngIf="isBookmark === false">edit</button>
-  <button (click)="onButtonClicked(event)">{{isBookmark === true ? 'remove from bookmark' : 'bookmark'}}</button>
+  <app-event [event]="event" [isBookmark]="isBookmark"></app-event>
 </div>
 
-<div *ngIf="mode == 'edit'"><app-event></app-event></div>
-
-<!--{{event.name +', '+event.date}},-->
-<!--{{getDisplayValue(event)}}-->
