@@ -11,12 +11,14 @@ export class EventComponent implements OnInit {
   @Input() event: EventModel;
   @Input() isBookmark: boolean;
 
-  mode: 'view'|'edit' = 'view';
+  mode: 'view' | 'edit' = 'view';
   eventClone: EventModel;
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
   onCancelButtonClicked() {
     this.mode = 'view';
@@ -38,8 +40,11 @@ export class EventComponent implements OnInit {
     this.eventClone = {name: this.event.name, date: this.event.date, isBookmarked: this.event.isBookmarked}; // neuer clone
   }
 
+  //
+  // onDeleteButtonClicked( ) {
+  //
+  // }
 
 }
-
 
 

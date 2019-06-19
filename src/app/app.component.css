@@ -1,6 +1,6 @@
 .titlebox{
   background-color: lightskyblue;
-  margin: 2px;
+  margin: 1px;
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 }
 .smalTitlebox{
   background-color: aquamarine;
-  margin: 2px;
+  margin: 1px;
   width: 100%;
   padding: 5px;
   box-sizing: border-box;
