@@ -10,33 +10,35 @@ export class EventComponent implements OnInit {
 
   @Input() event: EventModel;
   @Input() isBookmark: boolean;
-  @Input() events: EventModel;
 
   mode: 'view'|'edit' = 'view';
+  eventClone: EventModel;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
 
-  }
-
-  onCancelButtonClicked(event: EventModel) {
-    this.mode = 'view';
-    this.event.name = this.event.name;
-    this.event.date = this.event.date;
-  }
-
-  onSaveButtonClicked(event: EventModel) {
+  onCancelButtonClicked() {
     this.mode = 'view';
   }
 
-  onButtonClicked(event: EventModel) {
-    event.isBookmarked = !event.isBookmarked;
+  onSaveButtonClicked() {
+    this.mode = 'view';
+    this.event.name = this.eventClone.name;
+    this.event.date = this.eventClone.date;
+    this.event.isBookmarked = this.eventClone.isBookmarked;
   }
 
-  onEdit(event: EventModel) {
+  onButtonClicked() {
+    this.event.isBookmarked = !this.event.isBookmarked;
+  }
+
+  onEdit() {
     this.mode = 'edit'; // bin jetzt im edit modus
+    this.eventClone = {name: this.event.name, date: this.event.date, isBookmarked: this.event.isBookmarked}; // neuer clone
   }
+
+
 }
 
 

@@ -1,5 +1,6 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {EventModel} from './event.model';
+
 
 @Component({
   selector: 'app-root',
@@ -14,6 +15,10 @@ export class AppComponent {
     {name: 'Sommer Sonnwendefeier', date: new Date(), isBookmarked: true}
   ];
 
+  // @Input() event: EventModel;
+  //
+  // newEvent: EventModel;
+
   constructor() {
 
   }
@@ -24,5 +29,10 @@ export class AppComponent {
 
   getBookmarkEvents() {
     return this.events.filter(event => event.isBookmarked === true);
+  }
+
+
+  addEvent(eventname: string, date: string) {
+      this.events.push({name: eventname, date: new Date(date), isBookmarked: false});
   }
 }

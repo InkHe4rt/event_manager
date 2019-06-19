@@ -4,7 +4,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Hello, adventure!</title>
+  <title>Hello, Adventure!</title>
 </head>
 <body>
 
@@ -14,6 +14,17 @@
 
 <div class="smalTitlebox">
   <h2>Events</h2>
+<!-- add event -->
+  <div>
+    <form (submit)="addEvent(eventName.value, eventDate.value)">
+    <input #eventName
+    placeholder="Eventname">
+    <input #eventDate type="date" placeholder="date">
+      <button type="submit">add event</button>
+    </form>
+
+  </div>
+  <br>
 <!-- event list -->
 <app-event-list [events]="getEvents()" [isBookmark]="false"></app-event-list>
 </div>
