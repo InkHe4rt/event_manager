@@ -9,9 +9,10 @@ import {EventModel} from './event.model';
 export class AppComponent {
 
   events: EventModel[] = [
-    {name: 'Fribourg en Médiéval', date: new Date('1995-12-17T03:24:00'), isBookmarked: false},
-    {name: 'Burg Manneberg', date: new Date(), isBookmarked: true},
-    {name: 'Sommer Sonnwendefeier', date: new Date(), isBookmarked: true}
+    {name: 'Johannisfest auf Schloss Greyerz', date: new Date('2019-06-22T03:24:00'), isBookmarked: false},
+    {name: 'Mittelalterfest Burg Manneberg', date: new Date('2019-06-21T03:24:00'), isBookmarked: false},
+    {name: 'Sommer Sonnwendefeier', date: new Date('2019-06-23T03:24:00'), isBookmarked: true},
+    {name: 'Sackpfeifen/Dudelsack Kurs auf Schloss Werdenberg', date: new Date('2019-06-29T03:24:00'), isBookmarked: false}
   ];
 
   constructor() {

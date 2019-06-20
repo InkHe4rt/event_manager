@@ -12,7 +12,7 @@ export class EventComponent implements OnInit {
   @Input() isBookmark: boolean;
 
   @Input() transaction: EventModel;
-  @Output() deleteRow: EventEmitter<EventModel> = new EventEmitter<EventModel>();
+  @Output() deleteRow: EventEmitter<any> = new EventEmitter<any>();
 
   mode: 'view' | 'edit' = 'view';
   eventClone: EventModel;
@@ -44,8 +44,7 @@ export class EventComponent implements OnInit {
   }
 
    onDeleteButtonClicked() {
-     this.deleteRow.emit(this.transaction);
-     console.log(this.transaction);
+     this.deleteRow.emit(this.event);
 
    }
 

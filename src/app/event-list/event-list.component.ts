@@ -18,6 +18,11 @@ export class EventListComponent implements OnInit {
 
   }
 
+  onDeleteRow(item: any) {
+    this.events.splice(this.events.indexOf(item), 1);
+    //this.events = this.events.filter(elem => elem !== item );
+    console.log(this.events.length);
+  }
 
 
 }
