@@ -11,8 +11,7 @@ export class EventComponent implements OnInit {
   @Input() event: EventModel;
   @Input() isBookmark: boolean;
 
-  @Input() transaction: EventModel;
-  @Output() deleteRow: EventEmitter<any> = new EventEmitter<any>();
+  @Output() delete: EventEmitter = new EventEmitter();
 
   mode: 'view' | 'edit' = 'view';
   eventClone: EventModel;
@@ -43,8 +42,9 @@ export class EventComponent implements OnInit {
     this.eventClone = {name: this.event.name, date: this.event.date, isBookmarked: this.event.isBookmarked}; // neuer clone
   }
 
-   onDeleteButtonClicked() {
-     this.deleteRow.emit(this.event);
+  onDelete($event) {
+     this.delete.emit(this.event);
+     console.log('test2eventlist');
 
    }
 

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {EventModel} from '../event.model';
 
 @Component({
@@ -11,6 +11,9 @@ export class EventListComponent implements OnInit {
   @Input() events: EventModel[];
   @Input() isBookmark: boolean;
 
+  @Output() delete = new EventEmitter();
+
+
   constructor() {
   }
 
@@ -18,11 +21,10 @@ export class EventListComponent implements OnInit {
 
   }
 
-  onDeleteRow(item: any) {
-    this.events.splice(this.events.indexOf(item), 1);
-    //this.events = this.events.filter(elem => elem !== item );
-    console.log(this.events.length);
-  }
+onDelete() {
+  this.delete.emit(this.events);
+  console.log('test2eventlist');
 
+}
 
 }

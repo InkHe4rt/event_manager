@@ -1,4 +1,5 @@
 <div *ngFor="let event of events">
-  <app-event [event]="event" [isBookmark]="isBookmark" (deleteRow)="onDeleteRow($event)"></app-event>
+  <app-event [event]="event" (delete)="onDelete()" [isBookmark]="isBookmark" ></app-event>
 </div>
 
+<!--"-->

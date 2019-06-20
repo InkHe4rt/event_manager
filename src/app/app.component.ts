@@ -30,4 +30,8 @@ export class AppComponent {
   addEvent(eventname: string, date: string) {
       this.events.push({name: eventname, date: new Date(date), isBookmarked: false});
   }
+
+  onDelete() {
+  console.log('test3appcomponent');
+  }
 }
